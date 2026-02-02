@@ -155,6 +155,7 @@
             text-align: center;
             width: 100%;
             max-width: 100%;
+            overflow: hidden;
         }
 
         .elite-perks h3 {
@@ -164,10 +165,11 @@
 
         .elite-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
             gap: 2rem;
             margin-top: 2rem;
             width: 100%;
+            max-width: 100%;
         }
 
         .elite-item {
@@ -176,6 +178,9 @@
             border-radius: 8px;
             border: 2px solid var(--gold);
             width: 100%;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
 
         .elite-item h4 {
@@ -370,6 +375,11 @@
 
             .elite-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .elite-item {
+                padding: 1.25rem;
             }
 
             .benefits-grid {
